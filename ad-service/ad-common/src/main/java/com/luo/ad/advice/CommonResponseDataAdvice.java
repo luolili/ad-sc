@@ -40,6 +40,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
      * @return
      */
     @Override
+    @SuppressWarnings("all")
     public Object beforeBodyWrite(Object body,
                                   MethodParameter returnType,
                                   MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
