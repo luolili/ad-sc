@@ -10,6 +10,7 @@
     <modules>
         <module>ad-eureka</module>
         <module>ad-gateway</module>
+        <module>ad-service</module>
     </modules>
     <!-- 父project 必须是 pom-->
     <packaging>pom</packaging>

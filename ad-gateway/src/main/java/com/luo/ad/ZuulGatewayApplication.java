@@ -2,12 +2,12 @@ package com.luo.ad;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * http://localhost:8000/
  */
-@EnableEurekaClient
+@EnableZuulProxy
 @SpringCloudApplication
 public class ZuulGatewayApplication {
     public static void main(String[] args) {
