@@ -1,16 +1,14 @@
 package com.luo.ad.vo;
 
-import com.imooc.ad.constant.CommonStatus;
-import com.imooc.ad.entity.Creative;
+import com.luo.ad.constant.CommonStatus;
+import com.luo.ad.entity.Creative;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-/**
- * Created by Qinyi.
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
