@@ -1,11 +1,9 @@
 package com.luo.ad.service;
 
-import com.imooc.ad.exception.AdException;
-import com.imooc.ad.vo.*;
 
-/**
- * Created by Qinyi.
- */
+import com.luo.ad.exception.AdException;
+import com.luo.ad.vo.*;
+
 public interface IAdUnitService {
 
     AdUnitResponse createUnit(AdUnitRequest request) throws AdException;

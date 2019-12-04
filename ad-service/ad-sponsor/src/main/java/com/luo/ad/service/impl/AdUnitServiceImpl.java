@@ -1,22 +1,22 @@
 package com.luo.ad.service.impl;
 
-import com.imooc.ad.constant.Constants;
-import com.imooc.ad.dao.AdPlanRepository;
-import com.imooc.ad.dao.AdUnitRepository;
-import com.imooc.ad.dao.CreativeRepository;
-import com.imooc.ad.dao.unit_condition.AdUnitDistrictRepository;
-import com.imooc.ad.dao.unit_condition.AdUnitItRepository;
-import com.imooc.ad.dao.unit_condition.AdUnitKeywordRepository;
-import com.imooc.ad.dao.unit_condition.CreativeUnitRepository;
-import com.imooc.ad.entity.AdPlan;
-import com.imooc.ad.entity.AdUnit;
-import com.imooc.ad.entity.unit_condition.AdUnitDistrict;
-import com.imooc.ad.entity.unit_condition.AdUnitIt;
-import com.imooc.ad.entity.unit_condition.AdUnitKeyword;
-import com.imooc.ad.entity.unit_condition.CreativeUnit;
-import com.imooc.ad.exception.AdException;
-import com.imooc.ad.service.IAdUnitService;
-import com.imooc.ad.vo.*;
+import com.luo.ad.constant.Constants;
+import com.luo.ad.dao.AdPlanRepository;
+import com.luo.ad.dao.AdUnitRepository;
+import com.luo.ad.dao.CreativeRepository;
+import com.luo.ad.dao.unit_condition.AdUnitDistrictRepository;
+import com.luo.ad.dao.unit_condition.AdUnitItRepository;
+import com.luo.ad.dao.unit_condition.AdUnitKeywordRepository;
+import com.luo.ad.dao.unit_condition.CreativeUnitRepository;
+import com.luo.ad.entity.AdPlan;
+import com.luo.ad.entity.AdUnit;
+import com.luo.ad.entity.unit_condition.AdUnitDistrict;
+import com.luo.ad.entity.unit_condition.AdUnitIt;
+import com.luo.ad.entity.unit_condition.AdUnitKeyword;
+import com.luo.ad.entity.unit_condition.CreativeUnit;
+import com.luo.ad.exception.AdException;
+import com.luo.ad.service.IAdUnitService;
+import com.luo.ad.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -24,9 +24,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by Qinyi.
- */
+
 @Service
 public class AdUnitServiceImpl implements IAdUnitService {
 

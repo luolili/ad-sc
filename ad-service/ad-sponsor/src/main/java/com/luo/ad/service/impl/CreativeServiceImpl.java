@@ -1,16 +1,14 @@
 package com.luo.ad.service.impl;
 
-import com.imooc.ad.dao.CreativeRepository;
-import com.imooc.ad.entity.Creative;
-import com.imooc.ad.service.ICreativeService;
-import com.imooc.ad.vo.CreativeRequest;
-import com.imooc.ad.vo.CreativeResponse;
+import com.luo.ad.dao.CreativeRepository;
+import com.luo.ad.entity.Creative;
+import com.luo.ad.service.ICreativeService;
+import com.luo.ad.vo.CreativeRequest;
+import com.luo.ad.vo.CreativeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by Qinyi.
- */
+ 
 @Service
 public class CreativeServiceImpl implements ICreativeService {
 
