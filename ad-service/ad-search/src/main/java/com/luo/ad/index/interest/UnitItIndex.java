@@ -1,7 +1,7 @@
 package com.luo.ad.index.interest;
 
-import com.imooc.ad.index.IndexAware;
-import com.imooc.ad.utils.CommonUtils;
+import com.luo.ad.index.IndexAware;
+import com.luo.ad.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;

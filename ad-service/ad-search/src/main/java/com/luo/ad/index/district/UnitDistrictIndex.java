@@ -1,8 +1,7 @@
 package com.luo.ad.index.district;
 
-import com.imooc.ad.index.IndexAware;
-import com.imooc.ad.search.vo.feature.DistrictFeature;
-import com.imooc.ad.utils.CommonUtils;
+import com.luo.ad.index.IndexAware;
+import com.luo.ad.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
@@ -14,9 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.stream.Collectors;
 
-/**
- * Created by Qinyi.
- */
+
 @Slf4j
 @Component
 public class UnitDistrictIndex implements IndexAware<String, Set<Long>> {
