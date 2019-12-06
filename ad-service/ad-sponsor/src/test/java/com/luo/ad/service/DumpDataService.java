@@ -1,6 +1,8 @@
 package com.luo.ad.service;
 
+import com.alibaba.fastjson.JSON;
 import com.luo.ad.App;
+import com.luo.ad.constant.CommonStatus;
 import com.luo.ad.dao.AdPlanRepository;
 import com.luo.ad.dao.AdUnitRepository;
 import com.luo.ad.dao.CreativeRepository;
@@ -8,11 +10,28 @@ import com.luo.ad.dao.unit_condition.AdUnitDistrictRepository;
 import com.luo.ad.dao.unit_condition.AdUnitItRepository;
 import com.luo.ad.dao.unit_condition.AdUnitKeywordRepository;
 import com.luo.ad.dao.unit_condition.CreativeUnitRepository;
+import com.luo.ad.dump.table.AdCreativeTable;
+import com.luo.ad.dump.table.AdPlanTable;
+import com.luo.ad.dump.table.AdUnitTable;
+import com.luo.ad.entity.AdPlan;
+import com.luo.ad.entity.AdUnit;
+import com.luo.ad.entity.Creative;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {App.class}, webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class DumpDataService {
@@ -32,5 +51,96 @@ public class DumpDataService {
     AdUnitItRepository adUnitItRepository;
     @Autowired
     AdUnitKeywordRepository adUnitKeywordRepository;
+
+    public void dumpAdPlanTable(String fileName) {
+        List<AdPlan> planList = adPlanRepository
+                .findAllByPlanStatus(CommonStatus.VALID.getStatus());
+        if (CollectionUtils.isEmpty(planList)) {
+            return;
+        }
+        List<AdPlanTable> adPlanTableList = new ArrayList<>();
+        planList.forEach(i -> {
+            adPlanTableList.add(new AdPlanTable(
+                    i.getId(), i.getUserId(),
+                    i.getPlanStatus(),
+                    i.getStartDate(),
+                    i.getEndDate()
+            ));
+        });
+        Path path = Paths.get(fileName);
+        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+            for (AdPlanTable table : adPlanTableList) {
+                writer.write(JSON.toJSONString(table));
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            log.error("plan err");
+        }
+
+
+    }
+
+    public void dumpAdUnitTable(String fileName) {
+        List<AdUnit> list = adUnitRepository
+                .findAllByUnitStatus(CommonStatus.VALID.getStatus());
+        if (CollectionUtils.isEmpty(list)) {
+            return;
+        }
+        List<AdUnitTable> tableList = new ArrayList<>();
+        list.forEach(i -> {
+            tableList.add(new AdUnitTable(
+                    i.getId(),
+                    i.getUnitStatus(),
+                    i.getPositionType(),
+                    i.getPlanId()
+            ));
+        });
+        Path path = Paths.get(fileName);
+        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+            for (AdUnitTable table : tableList) {
+                writer.write(JSON.toJSONString(table));
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            log.error("unit err");
+        }
+
+
+    }
+
+    public void dumpAdCreativeTable(String fileName) {
+        List<Creative> list = creativeRepository
+                .findAll();
+        if (CollectionUtils.isEmpty(list)) {
+            return;
+        }
+        List<AdCreativeTable> tableList = new ArrayList<>();
+        list.forEach(i -> {
+            tableList.add(new AdCreativeTable(
+                    i.getId(),
+                    i.getName(),
+                    i.getType(),
+                    i.getMaterialType(),
+                    i.getHeight(),
+                    i.getWidth(),
+                    i.getAuditStatus(),
+                    i.getUrl()
+            ));
+        });
+        Path path = Paths.get(fileName);
+        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+            for (AdCreativeTable table : tableList) {
+                writer.write(JSON.toJSONString(table));
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            log.error("unit err");
+        }
+
+
+    }
 
 }
