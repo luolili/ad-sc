@@ -32,7 +32,7 @@ public class DataTable implements ApplicationContextAware, PriorityOrdered {
         return (T) applicationContext.getBean(clazz);
     }
 
-    private static <T> T of(Class<T> clazz) {
+    public static <T> T of(Class<T> clazz) {
         T instance = (T) dataTableMap.get(clazz);
         if (null != instance) {
             return instance;

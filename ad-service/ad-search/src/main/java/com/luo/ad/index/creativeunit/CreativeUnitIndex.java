@@ -1,7 +1,7 @@
 package com.luo.ad.index.creativeunit;
 
-import com.imooc.ad.index.IndexAware;
-import com.imooc.ad.index.adunit.AdUnitObject;
+import com.luo.ad.index.IndexAware;
+import com.luo.ad.index.adunit.AdUnitObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
@@ -10,9 +10,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
-/**
- * Created by Qinyi.
- */
+
 @Slf4j
 @Component
 public class CreativeUnitIndex implements

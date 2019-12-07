@@ -3,15 +3,12 @@ package com.luo.ad.index.district;
 import com.luo.ad.index.IndexAware;
 import com.luo.ad.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -83,7 +80,7 @@ public class UnitDistrictIndex implements IndexAware<String, Set<Long>> {
         log.info("UnitDistrictIndex, after delete: {}", unitDistrictMap);
     }
 
-    public boolean match(Long adUnitId,
+    /*public boolean match(Long adUnitId,
                          List<DistrictFeature.ProvinceAndCity> districts) {
 
         if (unitDistrictMap.containsKey(adUnitId) &&
@@ -102,5 +99,5 @@ public class UnitDistrictIndex implements IndexAware<String, Set<Long>> {
         }
 
         return false;
-    }
+    }*/
 }
