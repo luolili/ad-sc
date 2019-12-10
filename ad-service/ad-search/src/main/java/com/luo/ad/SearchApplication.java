@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @EnableHystrixDashboard
-@SpringCloudApplication
+@SpringCloudApplication//spring cloud bootstrap 上下文先于sb创建，事件创建上下文
 public class SearchApplication {
     public static void main(String[] args) {
 
