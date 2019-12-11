@@ -21,4 +21,19 @@ show master status; 最后一个日志 编号名称
 
 flush logs;刷新
 
-reset logs:clear
+reset logs:clear。
+
+spring env:
+
+1.profiles: 调用 ConfigurableEnvironment 接口 设置 profile 激活。
+
+ConfigurableEnvironment 的方法：
+```
+void setActiveProfiles(String... profiles);
+//Add a profile to the current set of active profiles.
+void addActiveProfile(String profile);
+```
+
+2.property: PropertySources,PropertySource
+
+PropertySources 实现类：MutablePropertySources
