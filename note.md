@@ -74,3 +74,7 @@ BootstrapApplicationListener：DEFAULT_ORDER = Ordered.HIGHEST_PRECEDENCE + 5;
 ConfigFileApplicationListener：DEFAULT_ORDER = Ordered.HIGHEST_PRECEDENCE + 10;
 
 
+program arg/程序启动arg:--spring.cloud.bootstrap.name=demo:修改 bootstrap 配置文件名。
+--spring.cloud.bootstrap.location=config
+
+# 自定义 bootstrap 配置
