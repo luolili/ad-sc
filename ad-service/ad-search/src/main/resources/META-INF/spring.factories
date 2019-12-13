@@ -1,0 +1,4 @@
+# 多行的写法
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+  com.luo.ad.bootstrap.MyConfig,\
+  com.luo.ad.bootstrap.MyPropertySourceLocator

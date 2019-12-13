@@ -34,4 +34,6 @@ public class SearchApplication {
 
         return new RestTemplate();
     }
+
+
 }

@@ -78,3 +78,10 @@ program arg/程序启动arg:--spring.cloud.bootstrap.name=demo:修改 bootstrap 
 --spring.cloud.bootstrap.location=config
 
 # 自定义 bootstrap 配置
+1.先 create META-INF,spring.factories file, like sb starter；
+
+2.创建自己的 java config,写入到 spring.factories
+# 自定义 bootstrap 配置属性源
+1. 实现 PropertySourceLocator
+
+2.写入到 spring.factories
