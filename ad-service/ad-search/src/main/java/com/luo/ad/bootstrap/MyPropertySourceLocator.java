@@ -7,7 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 自定义 bootstrap 配置属性源
+ * 自定义 bootstrap 配置属性源:
+ * http://localhost:7001/ad-search/actuator/env/spring.application.name
  * PropertySourceLocator sc 的接口
  */
 public class MyPropertySourceLocator implements PropertySourceLocator {

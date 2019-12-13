@@ -1,6 +1,5 @@
 package com.luo.ad;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -25,7 +24,9 @@ import org.springframework.web.client.RestTemplate;
 public class SearchApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(SearchApplication.class, args);
+        //SpringApplication.run(SearchApplication.class, args);
+        //user.dir:F:\githubpro\ad-sc
+        System.out.println("user.dir:" + System.getProperty("user.dir"));
     }
 
     @Bean

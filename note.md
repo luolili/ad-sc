@@ -63,7 +63,7 @@ BootstrapApplicationListener：configName
 String configName = environment
 				.resolvePlaceholders("${spring.cloud.bootstrap.name:bootstrap}");
 ```
-
+#配置客户端
 application.yml 和 bootstrap.yml 同时存在的时候，只会加载第一个文件.
 在 http://localhost:7001/ad-search/actuator/env  ，有2个 applicationConfig：
 是application.yml，bootstrap.yml
@@ -77,11 +77,21 @@ ConfigFileApplicationListener：DEFAULT_ORDER = Ordered.HIGHEST_PRECEDENCE + 10;
 program arg/程序启动arg:--spring.cloud.bootstrap.name=demo:修改 bootstrap 配置文件名。
 --spring.cloud.bootstrap.location=config
 
-# 自定义 bootstrap 配置
+## 自定义 bootstrap 配置
 1.先 create META-INF,spring.factories file, like sb starter；
 
 2.创建自己的 java config,写入到 spring.factories
-# 自定义 bootstrap 配置属性源
+## 自定义 bootstrap 配置属性源
 1. 实现 PropertySourceLocator
 
-2.写入到 spring.factories
+2.写入到 spring.factories : 
+http://localhost:7001/ad-search/actuator/env/spring.application.name
+
+#配置服务端
+
+## 分布式配置
+架构图：
+
+传统：一个app,有多个实例，每个实例 对应同一个 config;
+
+分布式：多个配置客户端--一个负载均衡--多个配置服务器--cnfig--git
