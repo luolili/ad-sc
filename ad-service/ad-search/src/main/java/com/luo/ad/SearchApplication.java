@@ -25,7 +25,7 @@ public class SearchApplication {
     public static void main(String[] args) {
 
         //SpringApplication.run(SearchApplication.class, args);
-        //user.dir:F:\githubpro\ad-sc
+        //java: user.dir:F:\githubpro\ad-sc
         System.out.println("user.dir:" + System.getProperty("user.dir"));
     }
 

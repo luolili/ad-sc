@@ -11,6 +11,7 @@
         <module>ad-eureka</module>
         <module>ad-gateway</module>
         <module>ad-service</module>
+        <module>ad-config</module>
     </modules>
     <!-- 父project 必须是 pom-->
     <packaging>pom</packaging>
@@ -39,6 +40,16 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
