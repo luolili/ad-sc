@@ -10,6 +10,7 @@
         <module name="ad-config" />
         <module name="ad-config-client" />
         <module name="ad-eureka" />
+        <module name="ad-eureka-client" />
         <module name="ad-gateway" />
         <module name="ad-search" />
         <module name="ad-sponsor" />
@@ -22,6 +23,7 @@
       <module name="ad-config" options="-parameters" />
       <module name="ad-config-client" options="-parameters" />
       <module name="ad-eureka" options="-parameters" />
+      <module name="ad-eureka-client" options="-parameters" />
       <module name="ad-gateway" options="-parameters" />
       <module name="ad-search" options="-parameters" />
       <module name="ad-service" options="-parameters" />

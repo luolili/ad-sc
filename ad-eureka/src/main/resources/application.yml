@@ -7,8 +7,8 @@ eureka:
   instance:
     hostame: localhost
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: false # 不需要获取客户端信息
+    register-with-eureka: false # 不需要注册到其他registry center
     service-url:
       defaultZone: http://${eureka.instance.hostame}:${server.port}/eureka/
 

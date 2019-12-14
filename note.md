@@ -100,3 +100,10 @@ http://localhost:7001/ad-search/actuator/env/spring.application.name
 ## 动态配置属性 bean
 @ConfigurationProperties(prefix = "user") + 
 @EnableConfigurationProperties(User.class)
+
+# registry center
+1.配置文件里面的属性的名字模式:RelaxedNames,RelaxedDataBinder
+
+2.状态页面改变：客户端的 link:client配置
+
+EurekaClientConfigBean
