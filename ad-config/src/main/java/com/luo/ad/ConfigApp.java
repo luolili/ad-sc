@@ -11,6 +11,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * git commit -m "cc"
  * 配置的mapping
  * /application/profile
+ *http://localhost:8080/sf/test
+ *http://localhost:8080/sf-prod.properties
+ * http://localhost:8080/sf-default.properties
  */
 @SpringBootApplication
 @EnableConfigServer

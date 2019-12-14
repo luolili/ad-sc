@@ -94,4 +94,9 @@ http://localhost:7001/ad-search/actuator/env/spring.application.name
 
 传统：一个app,有多个实例，每个实例 对应同一个 config;
 
-分布式：多个配置客户端--一个负载均衡--多个配置服务器--cnfig--git
+分布式：多个配置客户端--一个负载均衡--多个配置服务器--config--git
+
+本地git仓库 和 remote git repo.
+## 动态配置属性 bean
+@ConfigurationProperties(prefix = "user") + 
+@EnableConfigurationProperties(User.class)
