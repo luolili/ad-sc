@@ -36,7 +36,7 @@ public class DemoRestCtr {
     @HystrixCommand(commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "100")
     }, fallbackMethod = "fallbackForIndex2")
-    @GetMapping("/hystrix")
+    @GetMapping("/hy")
     public String index2() throws Exception {
         long executeTime = random.nextInt(200);
         log.info("time:{}", executeTime);
