@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-config-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ad-dg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ad-dg/ad-dg-oldweb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-eureka-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ad-gateway" charset="UTF-8" />

@@ -14,6 +14,7 @@
         <module>ad-config</module>
         <module>ad-config-client</module>
         <module>ad-eureka-client</module>
+        <module>ad-dg</module>
     </modules>
     <!-- 父project 必须是 pom-->
     <packaging>pom</packaging>
