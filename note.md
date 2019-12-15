@@ -107,3 +107,54 @@ http://localhost:7001/ad-search/actuator/env/spring.application.name
 2.状态页面改变：客户端的 link:client配置
 
 EurekaClientConfigBean
+
+# 负载均衡
+## RestTemplate
+
+constructor
+```
+public RestTemplate(ClientHttpRequestFactory requestFactory) {
+		this();
+		setRequestFactory(requestFactory);
+	}
+	//序列化
+public RestTemplate() {
+		this.messageConverters.add(new ByteArrayHttpMessageConverter());
+		this.messageConverters.add(new StringHttpMessageConverter());
+		this.messageConverters.add(new ResourceHttpMessageConverter(false));
+		this.messageConverters.add(new SourceHttpMessageConverter<>());
+		this.messageConverters.add(new AllEncompassingFormHttpMessageConverter());
+
+		if (romePresent) {
+			this.messageConverters.add(new AtomFeedHttpMessageConverter());
+			this.messageConverters.add(new RssChannelHttpMessageConverter());
+		}
+
+		if (jackson2XmlPresent) {
+			this.messageConverters.add(new MappingJackson2XmlHttpMessageConverter());
+		}
+		else if (jaxb2Present) {
+			this.messageConverters.add(new Jaxb2RootElementHttpMessageConverter());
+		}
+
+		if (jackson2Present) {
+			this.messageConverters.add(new MappingJackson2HttpMessageConverter());
+		}
+		else if (gsonPresent) {
+			this.messageConverters.add(new GsonHttpMessageConverter());
+		}
+		else if (jsonbPresent) {
+			this.messageConverters.add(new JsonbHttpMessageConverter());
+		}
+
+		if (jackson2SmilePresent) {
+			this.messageConverters.add(new MappingJackson2SmileHttpMessageConverter());
+		}
+		if (jackson2CborPresent) {
+			this.messageConverters.add(new MappingJackson2CborHttpMessageConverter());
+		}
+	}
+
+```
+
+ClientHttpRequestFactory:适配
