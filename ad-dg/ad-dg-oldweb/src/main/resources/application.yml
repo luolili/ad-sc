@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate.format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ad-data?serverTimezone=UTC&characterEncoding=utf-8&userSSL=false
+    username: root
+    password: 123
+    tomcat:
+      max-active: 4
+      min-idle: 2
+      initial-size: 2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
