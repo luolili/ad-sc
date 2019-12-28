@@ -37,7 +37,7 @@ public class CartService {
     }
 
     /**
-     * v2
+     * v2：判断条件参数化
      */
     public static List<Sku> filterSkusByCategory(List<Sku> skuList, SkuCategoryEnum categoryEnum) {
 
