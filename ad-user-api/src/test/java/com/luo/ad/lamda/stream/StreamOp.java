@@ -75,4 +75,13 @@ public class StreamOp {
     }
 
     //terminal操作
+    @Test
+    public void allMatch() {
+        list.stream()
+                //返回值是 steam
+                .allMatch(sku -> sku.getTotalPrice() > 300);
+
+
+    }
+
 }
