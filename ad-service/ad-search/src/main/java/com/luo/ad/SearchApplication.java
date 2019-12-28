@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * http://localhost:8000/
  */
 @EnableFeignClients
+//@EnableFeignClients(clients = {UserService.class})
 @EnableEurekaClient
 @EnableHystrix
 @EnableCircuitBreaker

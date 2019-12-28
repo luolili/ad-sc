@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
+// FeignClient 声明客户端
 @FeignClient(value = "eureka-client-ad-sponsor", fallback = SponsorClientHystrix.class)
 public interface SponsorClient {
 

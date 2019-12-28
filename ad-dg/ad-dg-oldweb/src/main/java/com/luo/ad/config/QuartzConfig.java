@@ -27,6 +27,7 @@ public class QuartzConfig {
                 .usingJobData("trigger_param", "trigger_param1")
 
                 .startNow()
+                //如果设置的年份是2019之前，会报错
                 .withSchedule(CronScheduleBuilder.cronSchedule("0/5 * * * * ? 2019"))
                 .build();
     }
