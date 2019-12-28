@@ -17,7 +17,6 @@ public class StreamVs {
         List<Sku> cartSkuList = CartService.getCartSkuList();
         AtomicReference<Double> money = new AtomicReference<>(Double.valueOf(0.0));
         List<String> list = cartSkuList.stream()
-
                 //打印
                 .peek(sku -> System.out.println(sku))
                 .filter(sku -> !SkuCategoryEnum.BOOKS.equals(sku.getSkuCategory()))
