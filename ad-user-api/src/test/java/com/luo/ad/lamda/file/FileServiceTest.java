@@ -1,5 +1,6 @@
 package com.luo.ad.lamda.file;
 
+import lombok.val;
 import org.junit.Test;
 
 public class FileServiceTest {
@@ -13,5 +14,12 @@ public class FileServiceTest {
             System.out.println(fileContent);
         });
 
+    }
+
+    //@RequiredArgsConstructor:final ,有验证的字段
+    @Test
+    public void testVal() {
+        val s = "sh";
+        System.out.println(s);
     }
 }
